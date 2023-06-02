@@ -1,0 +1,144 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/problem": {
+            "get": {
+                "description": "get Problem List",
+                "tags": [
+                    "Public implement"
+                ],
+                "summary": "Problem List",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "size",
+                        "name": "size",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "page",
+                        "name": "page",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "keyword",
+                        "name": "keyword",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "category",
+                        "name": "category",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"code\":\"200\",\"msg\",\"\",\"data\":\"\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/problem_detail": {
+            "get": {
+                "description": "get Problem Detail",
+                "tags": [
+                    "Public implement"
+                ],
+                "summary": "Problem Detail",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "problemID",
+                        "name": "problemID",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"code\":\"200\",\"msg\",\"\",\"data\":\"\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/record_detail": {
+            "get": {
+                "description": "get Record List",
+                "tags": [
+                    "Public implement"
+                ],
+                "summary": "Record List",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "problem_id",
+                        "name": "problemID",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "user_id",
+                        "name": "userID",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "language",
+                        "name": "language",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "status",
+                        "name": "status",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"code\":\"200\",\"msg\",\"\",\"data\":\"\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/user_detail": {
+            "get": {
+                "description": "get user detail",
+                "tags": [
+                    "Public implement"
+                ],
+                "summary": "user Detail",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "username",
+                        "name": "username",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"code\":\"200\",\"msg\",\"\",\"data\":\"\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

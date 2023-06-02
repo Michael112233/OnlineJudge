@@ -1,0 +1,92 @@
+info:
+  contact: {}
+paths:
+  /problem:
+    get:
+      description: get Problem List
+      parameters:
+      - description: size
+        in: query
+        name: size
+        type: integer
+      - description: page
+        in: query
+        name: page
+        type: integer
+      - description: keyword
+        in: query
+        name: keyword
+        type: string
+      - description: category
+        in: query
+        name: category
+        type: string
+      responses:
+        "200":
+          description: '{"code":"200","msg","","data":""}'
+          schema:
+            type: string
+      summary: Problem List
+      tags:
+      - Public implement
+  /problem_detail:
+    get:
+      description: get Problem Detail
+      parameters:
+      - description: problemID
+        in: query
+        name: problemID
+        type: integer
+      responses:
+        "200":
+          description: '{"code":"200","msg","","data":""}'
+          schema:
+            type: string
+      summary: Problem Detail
+      tags:
+      - Public implement
+  /record_detail:
+    get:
+      description: get Record List
+      parameters:
+      - description: problem_id
+        in: query
+        name: problemID
+        type: integer
+      - description: user_id
+        in: query
+        name: userID
+        type: integer
+      - description: language
+        in: query
+        name: language
+        type: string
+      - description: status
+        in: query
+        name: status
+        type: integer
+      responses:
+        "200":
+          description: '{"code":"200","msg","","data":""}'
+          schema:
+            type: string
+      summary: Record List
+      tags:
+      - Public implement
+  /user_detail:
+    get:
+      description: get user detail
+      parameters:
+      - description: username
+        in: query
+        name: username
+        type: string
+      responses:
+        "200":
+          description: '{"code":"200","msg","","data":""}'
+          schema:
+            type: string
+      summary: user Detail
+      tags:
+      - Public implement
+swagger: "2.0"
